@@ -1,0 +1,84 @@
+[b=1000][left][s=25][u]
+line>Plasma Structure Text (PST)<
+[/b][left][s=16][/u]
+text>Plasma Structure Text (PST) is a markup language designed for structuring and formatting content within the PlasmaNet ecosystem. It is used to define the presentation of text and hyperlinks in a simple and readable format.<
+[i][b=1000]
+text> PST<
+[/i][/b]
+text> is optimized for ease of use and flexibility, allowing content creators to focus on the content itself rather than complex syntax.<
+line><
+[i][center][s=20][u]
+line>Key Features:<
+[/i][/u][left]
+line><
+[font=Courier][s=16]
+line>- [b] and [/b]: Bold text with weight. e.g., [b=1000]<
+line>- [i] and [/i]: Italicize text.<
+line>- [u] and [/u]: Underline text.<
+line>- [s=size] and [/s]: Set font size, e.g., [s=25] for size 25.<
+line>- [font=fontname]: Set font family, e.g., [font=Arial].<
+line>- [center], [left], [right]: Align text to the center, left, or right.<
+line>- line>< and text><: Define line breaks and plain text.<
+line>- link<url>text<: Create clickable hyperlinks.<
+line><
+[i][center][s=20][u]
+line>Example Usage:<
+[/i][/u][left]
+line><
+
+[left][s=16][u]
+line>How to Create a Bold, Underlined Header:<
+[/u]
+[font=Courier][s=16]
+line>[b=1000][left][s=25][u]<<
+line>line>Welcome to PlasmaNet!<<
+line>[/b][left][s=16][/u]<<
+line><
+
+[left][s=16][u]
+line>How to Use Links:<
+[/u]
+[font=Courier][s=16]
+line>link<pttp://main.com/learn_more>Learn More<<
+line><
+
+[left][s=16][u]
+line>Centered Important Notice (EXAMPLE):<
+[/u]
+[font=Courier][s=16]
+line>[b=500][center][s=20]<<
+line>line>Important Notice<<
+line>[/b][left][s=16]<<
+line>text>This is an example of centered, bold text with a custom font size.<<
+line><
+
+[left][s=16][u]
+line>Right-Aligned Contact Information (EXAMPLE):<
+[/u]
+[font=Courier][s=16]
+line>[i][right][s=18]<<
+line>line>Contact Us<<
+line>[/i][left][s=16]<<
+line>text>For more information, visit our contact page.<<
+line>link<pttp://main.com/contact>Contact Page<<
+line><
+
+[left][s=16][u]
+line>How to use fonts:<
+[/u]
+[font=Courier][s=16]
+line>[font=Courier][s=14]<<
+line>line>Code Snippet:<<
+line>[/font][left][s=16]<<
+line>text>Here is an example of code formatting using a monospaced font.<<
+line><
+
+[left][s=16][u]
+line>Underlining:<
+[/u]
+[font=Courier][s=16]
+line>[u][left][s=16]<<
+line>line>Underlined Heading<<
+line>[/u][left][s=16]<<
+line><
+

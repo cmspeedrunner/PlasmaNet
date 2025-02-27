@@ -1,0 +1,9 @@
+[b=1000][left][s=25][u]
+line>Ion<
+[/b][left][s=16][/u]
+text>Ion is the browser for PlasmaNet and is the only browser that can communicate and transmit data across the <
+link<main.com/protocol.pst>PTTP<
+line> medium.<
+text>Ion is also responsible for parsing and rendering the <
+link<main.com/structure.pst>Plasma Structure Text<
+line> markup. Ion is basic, having only a foward and back arrow, a URL text bar and a "Go" button, Ion will be expanded in the future.<

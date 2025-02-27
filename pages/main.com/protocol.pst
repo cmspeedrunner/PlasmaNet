@@ -1,0 +1,37 @@
+[b=1000][left][s=25][u]
+line>PTTP<
+[/b][left][s=16][/u]
+text>The Plasma Text Transfer Protocol<
+[i][b=1000]
+text> (PTTP)<
+[/i][/b]
+text> is the application-layer protocol for transmitting PlasmaNet files between the server and client. PTTP only handles <
+[font=Courier]
+text>GET<
+[font=Ariel]
+text> requests as of Febuary 2025, but, is planned to feature a wider array of actions in the future.<
+line><
+[i][center][s=20][u]
+line>Visual Representation:<
+[/i][/u][left]
+line><
+[font=Courier][s=60]
+line>.-------.  Enters URL                    +------+<
+line>|Browser| -----------------------------> |Client|<
+line>'-------' "pttp://main.com/main.pst"     +------+<
+line>    |                                           |<
+line>    |                                           | Send PTTP Request to IP<
+line>    | Render                                    | GET "pttp://main.com/main.pst"<
+line>    | Parse and Render .pst markup              | From *Host Server IPv4 address*<
+line>    |                                           ↓<
+line>    |  Send file content back to Browser +------+<
+line>     ↖---------------------------------- |Server|<
+line>                 "main.pst" Content      +------+<
+line>                                         ↑      |<
+line>                       Send File Content |      | Access page from domain<
+line>                      "main.com/main.pst"|      | Locate pages/main.com/main.pst<
+line>                                         |      ↓<
+line>                                         +-------+<
+line>                                         |./Pages|<
+line>                                         +-------+<
+

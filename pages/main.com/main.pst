@@ -1,0 +1,55 @@
+[b=1000][center][s=40][u]
+line>PlasmaNet<
+
+[s=30][/b]
+line>-Overview-<
+
+[s=16][/b][/u]
+text>PlasmaNet is an Intranet type system, essentially a barebones version of the first<
+[i][b=1000]
+text> Tim-Berners-Lee<
+[/i][/b]
+line> World Wide Web.<
+
+
+line><
+
+[left][i][u][s=25]
+line>Features:<
+[/i][/u][s=16]
+text>• PlasmaNet uses a <
+link<main.com/protocol.pst>Unique Protocol<
+line> which is incredibly basic, only supporting GET requests (For Web Pages) as of Febuary 2025.<
+
+line><
+
+text>• PlasmaNet websites and pages are static and no scripting language exists yet. The markup language is also unique to PlasmaNet and is called <
+link<main.com/structure.pst>Plasma Structure Text<
+text>. The extension .<
+[font=Courier New]
+line>pst<
+[font=Ariel]
+line> is used for Plasma Structure files.<
+
+line><
+
+text>• You cannot access PlasmaNet from any browser other than <
+link<main.com/ion.pst>Ion<
+text>, which is the browser you are running right now. Only Ion can display and access the Plasma Network<
+
+line><
+
+[i][u][s=25]
+line><
+line>Purpose:<
+[/i][/u][s=16]
+line>PlasmaNet is not meant to be anything more than a fun project, I am not claiming victory over the World Wide Web and I am fully aware of the limitations. PlasmaNet is a simple toy, meant for enjoyement and curiosity.<
+text>I made this just to entertain myself, as it was <
+[i]
+text>suprisingly<
+[/i]
+line> fun to develop, make and iterate.<
+
+[center][b=1000][u]
+line>Thank you for reading!<
+[/b][/u]
