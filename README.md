@@ -1,12 +1,15 @@
 # PlasmaNet 
 PlasmaNet is a simple and barebones information system modelled closely to the Tim Berners-Lee 1989 World Wide Web.<br>
 
-PlasmaNet uses `pttp` (Plasma Text Transfer Protocol), as the method to transmit data across the PlasmaNet. `pttp` remains ambigous in regards to its label as a "New Protocol", so do take these labels with a pinch of salt.<br>
+PlasmaNet uses `pttp` (Plasma Text Transfer Protocol), as the method to transmit data across the PlasmaNet. `pttp` remains ambiguous in regards to its label as a "New Protocol", so do take this, aswell as other similar labels with a pinch of salt.<br>
 
 <b>Please keep in mind, PlasmaNet is a fun toy project, meant purely for curiousity and enjoyement. I do not assume PlasmaNet is anything more then that, I made this for entertainment</b><br>
 With that over, lets actually delve into PlasmaNet.
+<br>
+
 # Features
-PlasmaNet features its own protocol of sorts, it also doesn't use HTML, CSS or JavaScript and cannot be rendered in any browser other then the custom built `Ion` browser, which I will explain in detail. Here is a more in depth overview:
+PlasmaNet features its own protocol of sorts, it also doesn't use HTML, CSS or JavaScript and cannot be rendered in any browser other then the custom built `Ion` browser, which I will explain in detail. Here is a more in depth overview:<br>
+<br>
 
 ## Plasma Text Transfer Protocol (pttp)
 As mentioned earlier, this protocol is unique, not using https. This carries with it a risk, due to the lack of encryption using a standard https module would provide.<br>
@@ -35,6 +38,7 @@ IF FOUND
 This is just an abstracted outline of what it does, in essence, it just looks into the directories to check the existence for both the domain(website) and the page.<br>
 If it finds both the website and page specified, it gets the content of the file, and sends it back to `client.py`, which during this whole time has been listening on the port for the content.<br>
 The response sent back to `client.py` is sent to the browser, which then parses and renders the .pst format, which will be explained in the <b>Plasma Structure Text</b> section aswell as the <b>Ion</b> section.<br>
+<br>
 
 ## Plasma Structure Text
 Plasma Structure Text (pst) is the static markup language made for the Plasma ecosystem. Yes, I could've used HTML, but, as mentioned this project was a fun toy side project, and the purpose was to make everything from scratch.<br>
@@ -128,12 +132,14 @@ line>28th Febuary 2025<
 line>I found this github repo about something called PlasmaNet?<
 line>I mean, its alright- like...<
 ```
-This example, when rendered and displayed by the Ion browser looks like this:
+This example, when rendered and displayed by the Ion browser looks like this:<br>
 ![image](https://github.com/user-attachments/assets/367b6b4f-46d2-4475-8a7c-bda4aaa915a8)
+<br>
 
 ## Ion
 Ion is the browser that allows you to surf the Plasma Network, It is the only browser (as of now) that can do so, but do feel free to make a fork and create your own, any contribution is 110% welcome and appreciated.<br>
-The Ion browser is rudimentry and barebones, just like the Plasma ecosystem as a whole. On entry, you will be defaulted to `pttp://main.com/main.pst`, given you just cloned the repo, if you expand on the Domain System and the pages, make sure you either remove this default redirect, or change it to one of your likin.<br>
+The Ion browser is rudimentry and barebones, just like the Plasma ecosystem as a whole. On entry, you will be defaulted to `pttp://main.com/main.pst`, given you just cloned the repo, if you expand on the Domain System and the pages, make sure you either remove this default redirect, or change it to one of your liking.<br>
+<br>
 
 ### Loading pages
 For example, if my host is running the `server.py` file with this Domain System:
@@ -202,20 +208,28 @@ From here, if you wish to surf your PlasmaNet from a computer, it must have `cli
 ***HOST COMPUTER:***
 ```
 MyPlasmaNet\
-
   server.py
   pages\
-    website.com\
+    main.com\
       index.pst
       main.pst
 ```
 ***ANY CLIENT COMPUTER:***
 ```
-MyPlasmaNet\
-
-  server.py
-  pages\
-    website.com\
-      index.pst
-      main.pst
+SurfPlasma\
+  client.py
+  browser.py
 ```
+## Step 5: Getting Online
+On your Host computer, run this command:<br>
+`\MyPlasmaNet> py server.py` <br>
+
+Once `server.py` has been run on your host PC, run this command on any client:<br>
+`\SurfPlasma> py browser.py`<br>
+
+It is as simple as that! You are now surfing the PlasmaNet, given you have structured your `pages\` directory correctly, everything should work.<br>
+<br>
+***NOTE:*** <br>
+If you git clone this repo and do the steps without changing anything under `pages\`, it will work fine, but if you clone this repo and change the website(s) under `pages\` without updating the `browser.py` file, you will run into a few errors.<br>
+As mentioned, Ion redirects to `pages\main.com\main.pst`, so if you rename anything here, or delete anything, make sure you either remove this redirect feature, or update it accordingly.<br>
+
