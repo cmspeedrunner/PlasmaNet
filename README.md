@@ -166,11 +166,11 @@ And, like I said earlier, a Plasma website will load withou `index.pst`, given t
 You can make your `index.pst` file act like any other, if the first line doesn't start with `@`, Ion will treat the file like any other, so you could just make `index.pst` your default home page, its up to you!<br>
 
 # How to create A PlasmaNet
-## Step 1:
+## Step 1: Create the Host Enviroment
 Download the repo onto the host system and create a directory for `server.py` and `pages/` to sit in. This is what you need to run a host server.<br>
 In `server.py`, you can change the port and other settings to your liking, but remember these for the next step.
 
-## Step 2:
+## Step 2: Configure Client
 Still on the host system, open `client.py`, you should see these two lines at the top:<br>
 ```python
 import socket
@@ -191,10 +191,12 @@ Wireless LAN adapter WiFi:
    Default Gateway . . . . . . . . . : x
                                        x
 ```
-*(Actual values will be in places of the x and y on your machine, obviously I have nixed mine from the example)*
+*(Actual values will be in places of the x and y on your machine, obviously I have nixed mine from the example)* <br>
+
 From this line: `IPv4 Address. . . . . . . . . . . : ` copy the IP beside it.
-## Step 3:
-Go back to your `client.py` file and replace "Host IPv4" with the copied IPv4 address, for example:
+<br>
+
+Now, Go back to your `client.py` file and replace "Host IPv4" with the copied IPv4 address, for example:
 ```python
 import socket
 
@@ -202,7 +204,7 @@ HOST, PORT = "192.x.x.x", 8888  # IPv4 address of the computer hosting the serve
 ```
 Now you have configured the client so that pttp is routed to the host system always, this means you can access your PlasmaNet from any device that has the `client.py` and `browser.py` file.
 
-## Step 4:
+## Step 3: Create Client Enviroment
 From here, if you wish to surf your PlasmaNet from a computer, it must have `client.py` and `browser.py` in the same directory. The host only needs `server.py` and `pages/` in the same directory, just for example, this is how that could look<br>
 <br>
 ***HOST COMPUTER:***
@@ -220,12 +222,17 @@ SurfPlasma\
   client.py
   browser.py
 ```
-## Step 5: Getting Online
+
+## Step 4: Getting Online
 On your Host computer, run this command:<br>
 `\MyPlasmaNet> py server.py` <br>
 
 Once `server.py` has been run on your host PC, run this command on any client:<br>
 `\SurfPlasma> py browser.py`<br>
+
+Your Client can be on the same computer as your Host.<br>
+This repository is set up like that, if you clone this repo, Configure the IP correctly, you can just create two command prompts both located at `PlasmaNet-main>` and run these commands, that is how I developed and debugged PlasmaNet originally and is great for debugging and developing your own PlasmaNet<br>
+
 
 It is as simple as that! You are now surfing the PlasmaNet, given you have structured your `pages\` directory correctly, everything should work.<br>
 <br>
