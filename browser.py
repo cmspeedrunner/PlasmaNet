@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLineEdit, QLabel, QTextEdit
-from PyQt5.QtGui import QFont, QTextCharFormat, QCursor, QColor
+from PyQt5.QtGui import QFont, QTextCharFormat, QCursor
 from PyQt5.QtCore import Qt, QPoint
 import re
 import client as pttp
@@ -161,15 +161,12 @@ class BrowserWindow(QWidget):
             content = content.removeprefix("PTTP/1.0 200 OK").strip()
             lines = content.splitlines()
         formatted = False
-        current_color = QColor(Qt.black)
-        in_field = False
 
         for i, line in enumerate(lines):
             if "<" not in line:
                 formatted = True
                 formatval = QTextCharFormat()
                 formatval.setFontPointSize(16)
-                formatval.setForeground(current_color)
 
                 if "[b" in line:
                     weight = line.split("[b")[1].split("]")[0].strip().removeprefix("=")
@@ -199,19 +196,8 @@ class BrowserWindow(QWidget):
                 if "[font" in line:
                     font = line.split("[font")[1].split("]")[0].strip().removeprefix("=")
                     formatval.setFontFamily(font)
-                if "[col=" in line:
-                    rgb = line.split("[col=")[1].split("]")[0].strip()
-                    r, g, b = map(int, rgb.split(";"))
-                    current_color = QColor(r, g, b)
-                    formatval.setForeground(current_color)
-                if "[/col]" in line:
-                    current_color = QColor(Qt.black)
-                    formatval.setForeground(current_color)
 
             else:
-                
-                    
-
                 if line.startswith("line>"):
                     cursor = self.page_label.textCursor()
                     value = line.removeprefix("line>").removesuffix("<") + "\n"
@@ -228,11 +214,6 @@ class BrowserWindow(QWidget):
                     else:
                         formatval = QTextCharFormat()
                         cursor.insertText(value, formatval)
-                
-                
-
-                
-                    
 
                 elif line.startswith("link<"):
                     cursor = self.page_label.textCursor()
