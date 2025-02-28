@@ -240,3 +240,17 @@ It is as simple as that! You are now surfing the PlasmaNet, given you have struc
 If you git clone this repo and do the steps without changing anything under `pages\`, it will work fine, but if you clone this repo and change the website(s) under `pages\` without updating the `browser.py` file, you will run into a few errors.<br>
 As mentioned, Ion redirects to `pages\main.com\main.pst`, so if you rename anything here, or delete anything, make sure you either remove this redirect feature, or update it accordingly.<br>
 
+<br>
+# Conclusion
+In closing, I would like to reinforce the awareness I have of the limitations and faults that PlasmaNet has. I plan to update this and develop it further.<br>
+I loved this project and is so far, my favorite, most rewarding and most creative thing I have created, I made this with enjoyement, for enjoyement by enjoying it. I hope you guys can too.<br>
+
+That being said, these are the future goals:<br>
+
+- Add colours to PST ❌ <br>
+- Restart PST from the ground up ❌ <br>
+- Parse PST externally from browser ❌ <br>
+- Create a style script ❌ <br>
+- Create a behaviour script Engine ❌ <br>
+- Create the behaviour script ❌ <br>
+- Implement browser in C++, restructure client-browser interop ❌ <br>
