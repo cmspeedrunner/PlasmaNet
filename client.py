@@ -1,6 +1,6 @@
 import socket
 
-HOST, PORT = "192.168.1.68", 8888  # IPv4 address of the computer hosting the server.py file goes here.
+HOST, PORT = "Host IPv4", 8888  # IPv4 address of the computer hosting the server.py file goes here.
 
 def pttpGET(domain, page=None):
     
