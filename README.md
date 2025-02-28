@@ -34,9 +34,43 @@ IF FOUND
 ```
 This is just an abstracted outline of what it does, in essence, it just looks into the directories to check the existence for both the domain(website) and the page.<br>
 If it finds both the website and page specified, it gets the content of the file, and sends it back to `client.py`, which during this whole time has been listening on the port for the content.<br>
-The response sent back to `client.py` is sent to the browser, which then parses and renders the .pst format, which will be explained in the <b>Plasma Structure Text</b> section aswell as the <b>Ion</b> section.
+The response sent back to `client.py` is sent to the browser, which then parses and renders the .pst format, which will be explained in the <b>Plasma Structure Text</b> section aswell as the <b>Ion</b> section.<br>
 
 ## Plasma Structure Text
+Plasma Structure Text (pst) is the static markup language made for the Plasma ecosystem. Yes, I could've used HTML, but, as mentioned this project was a fun toy side project, and the purpose was to make everything from scratch.<br>
+
+***Hopefully that warning will excuse the poor markup abillities, sorry about that, I plan to expand it in the future!*** <br>
+
+Before delving into syntax, It is imperitive that I explain the purpose of the heirarchy under the `pages/` directory on the host machine<br>
+A website is defined by a folder, for example, to create a website called `hello.com`, you would create a folder called `hello.com` under `pages/`, this is how a website is registered on the psuedo-dns type database.<br>
+`pages/hello.com/` is where you would then place the `.pst` files that make up your website.<br>
+
+Each website should have a file called `index.pst`, your website does not need this, but it is incredibly important for this reason:<br>
+If the user enters `hello.com` or `pttp://hello.com/` into the browser without specifying the page, `pttp` sends a request for all the pages under `hello.com` and then searches for `index.pst`, the default home page. If you dont have this, entering just the domain will return a 404 error.<br>
+
+### How to use index.pst
+You can have index.pst be the default page and have it display your content directly, or, you can have it automatically redirect to a page. To do this, use `@`, for example if `hello.com` has the index file and another file called `hello.pst` in it:
+```
+Pages\
+  hello.com\
+    index.pst
+    hello.pst
+```
+Your `index.pst` file would look like this:
+```
+@hello.pst
+```
+This would mean your website redirects automatically to `hello.pst` if the user types just the domain into the search bar. You could also have `index.pst` be your home default page. I reccomend using it to redirect however, just for clean code.
+
+### Plasma Structure Syntax
+pst is incredibly simplistic and barebones, which has the dual effect of giving simplicity but also limiting user control and creativity, I apologise for this, I will update pst very soon.<br>
+
+Below is a cheatsheet-type list of the Plasma Structure Text syntax:<br>
+
+**Displaying Text**
+<hr>
+
+•**`text><`**
 
 ## Ion
 
