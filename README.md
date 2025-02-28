@@ -241,6 +241,7 @@ If you git clone this repo and do the steps without changing anything under `pag
 As mentioned, Ion redirects to `pages\main.com\main.pst`, so if you rename anything here, or delete anything, make sure you either remove this redirect feature, or update it accordingly.<br>
 
 <br>
+
 # Conclusion
 In closing, I would like to reinforce the awareness I have of the limitations and faults that PlasmaNet has. I plan to update this and develop it further.<br>
 I loved this project and is so far, my favorite, most rewarding and most creative thing I have created, I made this with enjoyement, for enjoyement by enjoying it. I hope you guys can too.<br>
