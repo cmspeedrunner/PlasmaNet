@@ -3,9 +3,12 @@ import socket
 HOST, PORT = "192.168.1.68", 8888  # IPv4 address of the computer hosting the server.py file goes here.
 
 def pttpGET(domain, page=None):
-    """Sends a PTTP request and prints the response."""
+    
     if page:
         request = f"GET {domain}/{page}\n"
+        
+        
+        
     else:
         request = f"GET {domain}\n"  # Request list of pages if no specific page
 
@@ -21,7 +24,7 @@ def pttpGET(domain, page=None):
             if not chunk:
                 break
             response += chunk
-
+        
         return response
 
     except ConnectionRefusedError:

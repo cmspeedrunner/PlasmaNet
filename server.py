@@ -1,10 +1,10 @@
 import socket
 import os
 
-HOST, PORT = "0.0.0.0", 8888  # Listen on all interfaces
+HOST, PORT = "0.0.0.0", 8888  
 
 def get_page_list(website):
-    """Return a list of available pages for a given website."""
+    
     website_path = os.path.join("pages", website)
     
     if not os.path.exists(website_path):
@@ -16,7 +16,7 @@ def get_page_list(website):
     return f"PTTP/1.0 200 OK\n\nAvailable pages:\n{page_list}"
 
 def get_page(path):
-    """Return the content of a requested page."""
+    
     file_path = os.path.join("pages", path)
     
     if not os.path.exists(file_path):
@@ -24,7 +24,7 @@ def get_page(path):
     
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
-    
+        
     return f"PTTP/1.0 200 OK\n\n{content}"
 
 def handle_request(request):
@@ -43,7 +43,6 @@ def handle_request(request):
         
         website = path.split("/")[0]  # Extract domain
         
-            
         if "/" not in path or path.endswith("/"):
             return get_page_list(website)
         else:
